@@ -1,0 +1,16 @@
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\bin\Debug\BSK1.exe.config
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\MainWindow.g.cs
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\App.g.cs
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\BSK1_MarkupCompile.cache
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\BSK1_MarkupCompile.lref
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\bin\Debug\BSK1.exe
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\bin\Debug\BSK1.pdb
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\MainWindow.baml
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\BSK1.g.resources
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\BSK1.Properties.Resources.resources
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\BSK1.csproj.GenerateResource.Cache
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\BSK1.exe
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\BSK1.pdb
+c:\users\donia\onedrive\dokumenty\visual studio 2015\Projects\BSK1\BSK1\obj\Debug\BSK1.csprojResolveAssemblyReference.cache
+C:\Users\donia\OneDrive\Dokumenty\Visual Studio 2015\Projects\BSK1\BSK1\obj\Debug\AllUsers.g.cs
+C:\Users\donia\OneDrive\Dokumenty\Visual Studio 2015\Projects\BSK1\BSK1\obj\Debug\AllUsers.baml

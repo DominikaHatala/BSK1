@@ -1,0 +1,167 @@
+﻿<Window x:Class="BSK1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BSK1"
+        mc:Ignorable="d"
+ 
+        Title="Bezpieczeństwo sieci komputerowych" Height="707.2" Width="345">
+
+    <Grid Background="#97694F" Margin="0,0,-0.6,1.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="176*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="112*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl  Grid.ColumnSpan="3" Margin="0,0,0.2,0.2" Background="#97694F">
+
+            <TabItem Header="ADD USER" Width="100"  >
+                <StackPanel Margin="21,25,21,383.4" Background="Bisque">
+                    <Label Content="Enter e-mail" Margin="0,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <TextBox x:Name="email" Width="220"  />
+                    <Label Content="Enter password" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <PasswordBox Name="password"  Width="220"  />
+                    <Button
+                            x:Name="addUser"
+                            Width="180"
+                            Margin="0,20,0,0"
+                            Background="#c67151"
+                            
+                            Content="Add user"
+                            Foreground="Black"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="addUser_Click" />
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="ENCODE" Height="22" Margin="0,0,-54.4,0.4" VerticalAlignment="Bottom">
+
+                <StackPanel Margin="22,24,19.6,43.2" Background="Bisque" >
+                    <Button
+                            x:Name="fileToEncode"
+                            Width="180"
+                            Margin="0,20,0,0"
+                           Background="#c67151"
+                            Content="Choose a file to encode"
+                            Foreground="Black"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="fileToEncode_Click" />
+                    <TextBox 
+                               x:Name="encodeName" 
+                               Margin="0,10 ,0,0" Width="220"/>
+
+
+                    <Button
+                            x:Name="outputFileDirectoryEncode"
+                            Width="180"
+                            Margin="0,10,0,0"
+                            Background="#c67151"
+                            Content="Choose output file directory"
+                            Foreground="Black"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="outputFileDirectoryEncode_Click" />
+
+                    <TextBox 
+                               x:Name="decodeName" 
+                               Margin="0,10 ,0,0" Width="220" />
+
+                    <GroupBox Header="Encryption mode" HorizontalAlignment="Center" Height="112" Margin="85,20,85.6,0" VerticalAlignment="Top" Width="111"/>
+
+                    <RadioButton x:Name="modeECB" Content="ECB" HorizontalAlignment="Center" Margin="27,-90,33.2,0" VerticalAlignment="Top" IsChecked="True" Checked="selectMode_Checked"/>
+                    <RadioButton x:Name="modeCBC" Content="CBC" HorizontalAlignment="Center" Margin="27,-70,33.2,0" VerticalAlignment="Top" Checked="selectMode_Checked"/>
+                    <RadioButton x:Name="modeCFB" Content="CFB" HorizontalAlignment="Center" Margin="27,-50,33.2,0" VerticalAlignment="Top" Checked="selectMode_Checked"/>
+                    <RadioButton x:Name="modeOFB" Content="OFB" HorizontalAlignment="Center" Margin="27,-30,33.2,0" VerticalAlignment="Top" Checked="selectMode_Checked"/>
+                    <Label Content="Enter key size" Margin="0,20,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <TextBox 
+                               x:Name="keySize_TextBox" 
+                               Text="256"
+                               Margin="0,0,0,0" Width="220"
+                               PreviewTextInput="keySize_TextBox_PreviewTextInput"/>
+                    <Label Content="Enter feedback size" Margin="0,10,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <TextBox 
+                               x:Name="blockSize_TextBox" 
+                               Text="8"
+                               Margin="0,0,0,0" Width="220"
+                               PreviewTextInput="blockSize_TextBox_PreviewTextInput"/>
+                    <Button
+                            x:Name="addUsers"
+                            Width="180"
+                            Margin="0,20,0,0"
+                           Background="#c67151"
+                            Content="Add Users"
+                            Foreground="Black"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="addUsers_Click" />
+                    <ListBox x:Name="usersListBox" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="220" Margin="0,10,0,0"/>
+
+                    <Button
+                            x:Name="generateRSAkey"
+                            Width="180"
+                            Margin="0,20,0,0"
+                           Background="#c67151"
+                            Content="Generate RSA key"
+                            Foreground="Black"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="generateRSAkey_Click" />
+                    <Button
+                            x:Name="encode"
+                            Width="180"
+                            Margin="51,10,50.6,0"
+                            Background="#c67151"
+                            Content="ENCODE"
+                            Foreground="Black"
+                            IsEnabled="False"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="encode_Click" />
+
+
+
+                </StackPanel>
+
+            </TabItem>
+
+            <TabItem Header="DECODE" Margin="55.4,0,-112.6,1.4">
+                <StackPanel Margin="21,25,20.6,267.6" Background="Bisque">
+                    <Button
+                            x:Name="fileToDecode"
+                            Width="180"
+                            Margin="0,20,0,0"
+                            Background="#c67151"
+                            Content="Choose a file to decode"
+                            Foreground="Black"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="fileToDecode_Click" />
+
+                    <TextBox x:Name="toDecodeName" 
+                               Margin="0,5,0,0" Width="220"/>
+                    <Label x:Name="extension_Label" Content="" HorizontalAlignment="center" Margin="0,0,0,0" VerticalAlignment="Top"/>
+
+                    <Label Content="Choose user" Margin="0,5,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <ListBox x:Name="decryptionUsersList" HorizontalAlignment="Center" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="220"/>
+                    <Label Content="Enter password" Margin="0,5
+                           ,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <PasswordBox x:Name="decryptionPassword" HorizontalAlignment="Center" Margin="0,0,0,0" Width="220"/>
+
+                    <Button
+                            x:Name="outputFileDirectoryDecode"
+                            Width="180"
+                            Margin="0,20,0,0"
+                            Background="#c67151"
+                            Content="Choose output file directory"
+                            Foreground="Black"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="outputFileDirectoryDecode_Click" />
+                    <TextBox x:Name="outputFileName" 
+                               Margin="0,5,0,0" Width="220"/>
+
+
+
+                    <Button
+                            x:Name="decode"
+                            Width="180"
+                            Margin="0,10,0,0"
+                            Background="#c67151"
+                            Content="DECODE"
+                            Foreground="Black"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="decode_Click" />
+
+                </StackPanel>
+
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>
